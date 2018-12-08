@@ -1,0 +1,1 @@
+# SenseFramework.Data.EntityFramework
