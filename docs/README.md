@@ -6,4 +6,4 @@ You may built your apps by implementing of certain libraries.
 Each library provides components for easiy implementations of repository pattern, unit of work, mapping, logging, aop etc.
 
 
-[![Build status](https://ci.appveyor.com/api/projects/status/stjnu9ko1p9t3rvj?svg=true)](https://ci.appveyor.com/project/ekinbulut/senseframework-data-entityframework)
+[![Build status](https://ci.appveyor.com/api/projects/status/bxfjbeja3vedaowj/branch/master?svg=true)](https://ci.appveyor.com/project/ekinbulut/senseframework-data-entityframework/branch/master)
