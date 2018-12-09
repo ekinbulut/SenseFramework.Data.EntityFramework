@@ -1,14 +1,25 @@
-﻿using Castle.DynamicProxy;
-using SenseFramework.Data.EntityFramework.Repositories;
-
+﻿/// <summary>
+/// Unit of work interface
+/// </summary>
 namespace SenseFramework.Data.EntityFramework.Attributes
 {
-    public interface IUnitOfWork<T, TPrimaryKey> 
-        where T : EntityBases.Entity<TPrimaryKey> 
+    using Repositories;
+
+    public interface IUnitOfWork<T, TPrimaryKey>
+        where T : EntityBases.Entity<TPrimaryKey>
         where TPrimaryKey : struct
     {
-        IRepository<T, TPrimaryKey> GetGetRepository();
+        /// <summary>
+        /// Gets the entity repository.
+        /// </summary>
+        /// <value>
+        /// The entity repository.
+        /// </value>
+        IRepository<T, TPrimaryKey> EntityRepository { get; }
 
+        /// <summary>
+        /// Saves the changes. Commit to database
+        /// </summary>
         void SaveChanges();
     }
 }
