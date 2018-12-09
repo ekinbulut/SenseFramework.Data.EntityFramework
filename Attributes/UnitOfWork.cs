@@ -9,29 +9,41 @@
  * 
  */
 
-using System;
 using Castle.Core.Logging;
-using Castle.DynamicProxy;
 using SenseFramework.Core.IoC;
-using SenseFramework.Data.EntityFramework.Context;
-using SenseFramework.Data.EntityFramework.Repositories;
 
 namespace SenseFramework.Data.EntityFramework.Attributes
 {
-    public class UnitOfWork<T, TPrimaryKey>: IUnitOfWork<T, TPrimaryKey> where T: EntityBases.Entity<TPrimaryKey> where TPrimaryKey :struct
+    using Context;
+    using Repositories;
+
+    public class UnitOfWork<T, TPrimaryKey> : IUnitOfWork<T, TPrimaryKey>
+        where T : EntityBases.Entity<TPrimaryKey>
+        where TPrimaryKey : struct
     {
         private readonly BaseContext _context;
         private readonly ILogger _logger;
 
-        public UnitOfWork()
+        public UnitOfWork(BaseContext context, ILogger logger = null)
         {
-            _context = IoCManager.Container.Resolve<BaseContext>();
-            _logger = IoCManager.Container.Resolve<ILogger>();
+            _context = context;
+
+            if (logger == null)
+            {
+                logger = new NullLogger();
+            }
+            else
+            {
+                _logger = logger;
+            }
         }
 
-        public IRepository<T, TPrimaryKey> GetGetRepository()
+        public IRepository<T, TPrimaryKey> EntityRepository
         {
-            return IoCManager.Container.Resolve<IRepository<T,TPrimaryKey>>();
+            get
+            {
+                return IoCManager.Container.Resolve<IRepository<T, TPrimaryKey>>();
+            }
         }
 
         public void SaveChanges()
