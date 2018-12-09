@@ -18,6 +18,7 @@ namespace SenseFramework.Data.EntityFramework.Repositories
 
     public abstract class EfRepositoryBase<TEntity, TPrimaryKey> : IRepository<TEntity, TPrimaryKey> 
         where TEntity : Entity<TPrimaryKey>
+        where TPrimaryKey : struct
     {
         protected readonly BaseContext DbContext;
 
@@ -27,7 +28,7 @@ namespace SenseFramework.Data.EntityFramework.Repositories
         /// <param name="dbContext">The database context.</param>
         protected EfRepositoryBase(BaseContext dbContext)
         {
-            DbContext = dbContext;
+            DbContext = dbContext;               
         }
 
         /// <summary>
