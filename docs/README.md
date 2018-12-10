@@ -1,4 +1,3 @@
-## SenseFramework.Data.EntityFramework
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y2g1w1epmdggnh5h/branch/master?svg=true)](https://ci.appveyor.com/project/ekinbulut/senseframework-data-entityframework/branch/master)
 
