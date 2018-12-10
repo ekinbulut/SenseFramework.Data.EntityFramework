@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenseFramework.Data.EntityFramework", "SenseFramework.Data.EntityFramework.csproj", "{A6ED363F-9F97-44C6-B13E-2EEC177C170D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8A911248-1AF6-4CA1-B9CE-B021154948FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenseFramework.Data.EntityFramework.UnitTests", "UnitTests\SenseFramework.Data.EntityFramework.UnitTests\SenseFramework.Data.EntityFramework.UnitTests.csproj", "{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{A6ED363F-9F97-44C6-B13E-2EEC177C170D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6ED363F-9F97-44C6-B13E-2EEC177C170D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6ED363F-9F97-44C6-B13E-2EEC177C170D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FDE5FCC-A867-404A-8A29-BF97A2BB5FC7} = {8A911248-1AF6-4CA1-B9CE-B021154948FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D58FC0AB-E6BF-4FED-A46B-0E36B4D6F6CF}
