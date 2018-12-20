@@ -19,7 +19,7 @@ namespace SenseFramework.Data.EntityFramework
 
 
             //if datamigration is enabled, proceed
-            if (!migrationEnabled.IsNullOrEmpty() && migrationEnabled.ToUpper().Equals("TRUE"))
+            if (!migrationEnabled.IsNullOrEmpty() && migrationEnabled.Equals("TRUE", System.StringComparison.OrdinalIgnoreCase))
             {
 
             }
